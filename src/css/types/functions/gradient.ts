@@ -84,7 +84,7 @@ export const calculateGradientDirection = (
 ): [number, number, number, number, number] => {
     const radian = typeof angle === 'number' ? angle : getAngleFromCorner(angle, width, height);
 
-    const lineLength = Math.abs(width * Math.sin(radian)) + Math.abs(height * Math.cos(radian));
+    const lineLength = Math.abs(width * Math.sin(radian)) + Math.abs(height * Math.cos(radian)) || 1;
 
     const halfWidth = width / 2;
     const halfHeight = height / 2;
